@@ -16,6 +16,19 @@ class EmployeeAttendance:
         self.app.config['MYSQL_DB'] = "employee_db"
         self.mysql = MySQL(self.app)
 
+#---------------------------------------------------------------------
+
+    # Generate a unique employee number
+    def generate_no(self):
+        while True:
+            random_number = ''.join(random.choices(string.digits, k=4))
+            current_year = datetime.datetime.now().year
+            employee_no = f"{current_year}-{random_number}"
+            
+            cursor = self.mysql.connection.cursor()
+            cursor.execute("SELECT COUNT(*) FROM employees WHERE employee_no = %s", (employee_no,))
+            if cursor.fetchone()[0] == 0:
+                return employee_no
 
 #---------------------------------------------------------------------
 
@@ -31,18 +44,6 @@ class EmployeeAttendance:
 
 #---------------------------------------------------------------------
 
-    def generate_employee_no(self):
-        while True:
-            random_number = ''.join(random.choices(string.digits, k=4))
-            current_year = datetime.datetime.now().year
-            employee_no = f"{current_year}-{random_number}"
-            
-            cursor = self.mysql.connection.cursor()
-            cursor.execute("SELECT COUNT(*) FROM employees WHERE employee_no = %s", (employee_no,))
-            if cursor.fetchone()[0] == 0:
-                return employee_no
-
-
         # Route to add a new employee
         @self.app.route("/add_employee", methods=['GET', 'POST'])
         def add_employee():
@@ -52,7 +53,7 @@ class EmployeeAttendance:
                 position = request.form['position']
                 
                 # Generate a unique employee number
-                employee_no = self.generate_employee_no()
+                employee_no = self.generate_no()
                 
                 cursor = self.mysql.connection.cursor()
                 cursor.execute("INSERT INTO employees (employee_no, name, department, position) VALUES (%s, %s, %s, %s)", (employee_no, name, department, position))
@@ -96,8 +97,6 @@ class EmployeeAttendance:
                 self.mysql.connection.commit()
             return redirect(url_for('employees'))
 
-
-#---------------------------------------------------------------------
 
     def run(self):
         self.app.run(debug=True, port="3000")
