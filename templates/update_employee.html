@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Employee</title>
+    <link rel="stylesheet" href="/static/update_employee.css">
+</head>
+<body>
+    <div>
+        <h1>Update Employee</h1>
+        <form method="POST">
+            <input type="hidden" name="id" value="{{ employee[0] }}">
+            <label for="employee_no">Employee No:</label>
+            <input type="text" id="employee_no" name="employee_no" value="{{ employee[1] }}" required>
+            
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" value="{{ employee[2] }}" required>
+            
+            <label for="department">Department:</label>
+            <input type="text" id="department" name="department" value="{{ employee[3] }}">
+            
+            <label for="position">Position:</label>
+            <input type="text" id="position" name="position" value="{{ employee[4] }}">
+            
+            <button type="submit">Update Employee</button>
+        </form>
+    </div>
+</body>
+</html>

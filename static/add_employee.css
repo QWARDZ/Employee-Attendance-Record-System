@@ -1,0 +1,65 @@
+/* Styles for Add Employee Form */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light background color for the whole page */
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-top: 20px;
+}
+
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold; /* Emphasize labels */
+    color: #555; /* Slightly darker label text */
+}
+
+input {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensures padding is included in width */
+}
+
+input:focus {
+    border-color: #4CAF50; /* Change border color on focus for accessibility */
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.3); /* Subtle shadow on focus */
+}
+
+button {
+    width: 100%;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    font-size: 16px; /* Increase font size for better readability */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+button:active {
+    transform: scale(0.98); /* Slight shrink on click */
+}

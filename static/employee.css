@@ -1,0 +1,133 @@
+/* Styles for the Employee Table */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+/* Styles for table headers and data cells */
+th, td {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+    text-align: left;
+    width: 20%; /* Set a fixed width for headers */
+}
+
+td {
+    background-color: #f4f4f4;
+    font-weight: normal;
+    text-align: left; 
+}
+
+/* Maintain consistent widths for table columns */
+#employeeTable th:nth-child(1),
+#employeeTable td:nth-child(1) {
+    width: 15%;
+}
+
+#employeeTable th:nth-child(2),
+#employeeTable td:nth-child(2) {
+    width: 25%;
+}
+
+#employeeTable th:nth-child(3),
+#employeeTable td:nth-child(3) {
+    width: 25%;
+}
+
+#employeeTable th:nth-child(4),
+#employeeTable td:nth-child(4) {
+    width: 20%;
+}
+
+#employeeTable th:nth-child(5),
+#employeeTable td:nth-child(5) {
+    width: 91%;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+/* Button styles */
+.btn {
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    text-decoration: none; /* Remove underline from links */
+}
+
+/* Add button */
+.btn-add {
+    margin-bottom: 15px;
+    padding: 10px 20px; /* Add horizontal padding */
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Adjust text size */
+    cursor: pointer; /* Change cursor on hover */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+.btn-add:hover {
+    background-color: #45a049; /* Slightly darker green on hover */
+}
+
+.btn-add:active {
+    transform: scale(0.98); /* Slightly shrink button on click */
+}
+
+/* Edit button */
+.btn-edit {
+    background-color: #4CAF50;
+    padding: 5px 10px;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+.btn-edit:hover {
+    background-color: #45a049; /* Slightly darker green on hover */
+}
+
+.btn-edit:active {
+    transform: scale(0.98); /* Slightly shrink button on click */
+}
+
+/* Delete button */
+.btn-delete {
+    background-color: #f44336;
+    padding: 5px 10px;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+.btn-delete:hover {
+    background-color: #d32f2f; /* Slightly darker red on hover */
+}
+
+.btn-delete:active {
+    transform: scale(0.98); /* Slightly shrink button on click */
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee List</title>
+    <link rel="stylesheet" href="/static/employee.css">
+</head>
+<body>
+    <div>
+        <h1>Employee List</h1>
+        <button onclick="window.location.href='/add_employee'" class="btn-add">+ Add new</button>
+        <table id="employeeTable">
+            <thead>
+                <tr>
+                    <th>Employee No</th>
+                    <th>Name</th>
+                    <th>Department</th>
+                    <th>Position</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for employee in employeesx %}
+                <tr>
+                    <td>{{ employee[1] }}</td>
+                    <td>{{ employee[2] }}</td>
+                    <td>{{ employee[3] }}</td>
+                    <td>{{ employee[4] }}</td>
+                    <td class="action-buttons">
+                        <button class="btn-edit" onclick="window.location.href='/update_employee?id={{ employee[0] }}'">Edit</button>
+                        <form action="/delete_employee" method="POST" style="display: inline;">
+                            <input type="hidden" name="id" value="{{ employee[0] }}">
+                            <button class="btn-delete" type="submit">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

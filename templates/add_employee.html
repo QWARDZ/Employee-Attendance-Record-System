@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Employee</title>
+    <link rel="stylesheet" href="/static/add_employee.css">
+</head>
+<body>
+    <div>
+        <h1>Add New Employee</h1>
+        <form method="POST">
+            <label for="employee_no">Employee No:</label>
+            <input type="text" id="employee_no" name="employee_no" required>
+            
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="department">Department:</label>
+            <input type="text" id="department" name="department">
+            
+            <label for="position">Position:</label>
+            <input type="text" id="position" name="position">
+            
+            <button type="submit">Add Employee</button>
+        </form>
+    </div>
+</body>
+</html>
