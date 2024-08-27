@@ -71,28 +71,28 @@ td {
     border: none;
     cursor: pointer;
     color: white;
-    text-decoration: none; /* Remove underline from links */
+    text-decoration: none; 
 }
 
 /* Add button */
 .btn-add {
     margin-bottom: 15px;
-    padding: 10px 20px; /* Add horizontal padding */
-    background-color: #4CAF50; /* Green background */
-    color: white; /* White text */
-    border: none; /* Remove default border */
-    border-radius: 5px; /* Rounded corners */
-    font-size: 16px; /* Adjust text size */
-    cursor: pointer; /* Change cursor on hover */
-    transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+    padding: 10px 20px;
+    background-color: #4CAF50; 
+    color: white;
+    border: none; 
+    border-radius: 5px; 
+    font-size: 16px; 
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .btn-add:hover {
-    background-color: #45a049; /* Slightly darker green on hover */
+    background-color: #45a049;
 }
 
 .btn-add:active {
-    transform: scale(0.98); /* Slightly shrink button on click */
+    transform: scale(0.98);
 }
 
 /* Edit button */
@@ -103,15 +103,15 @@ td {
     border: none;
     border-radius: 3px;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .btn-edit:hover {
-    background-color: #45a049; /* Slightly darker green on hover */
+    background-color: #45a049;
 }
 
 .btn-edit:active {
-    transform: scale(0.98); /* Slightly shrink button on click */
+    transform: scale(0.98);
 }
 
 /* Delete button */
@@ -122,13 +122,13 @@ td {
     border: none;
     border-radius: 3px;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .btn-delete:hover {
-    background-color: #d32f2f; /* Slightly darker red on hover */
+    background-color: #d32f2f;
 }
 
 .btn-delete:active {
-    transform: scale(0.98); /* Slightly shrink button on click */
+    transform: scale(0.98);
 }
