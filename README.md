@@ -29,5 +29,5 @@ CREATE TABLE employees (
 INSERT INTO employees (employee_no, name, department, position) VALUES
 ('2024-1234', 'John Edward Bearneza', 'IT', 'Programmer'),
 ('2024-9324', 'Hans Axiel Gallego', 'IT', 'Programmer'),
-('2024-5678', 'Annie May Abcede', 'IT', 'Project Manager'),
-('2024-6438', 'Irene Faith Parcon', 'IT', 'UI/UX');
+('2024-5678', 'Annie May Abcede', 'IT', 'Programmer'),
+('2024-6438', 'Irene Faith Parcon', 'IT', 'Programmer'),
